@@ -1295,12 +1295,12 @@ async def handle_get_numbers(update: Update, context: ContextTypes.DEFAULT_TYPE)
     for i in range(0, len(avail), 2):
         row = []
         row.append(InlineKeyboardButton(
-            f"{avail[i][1]['icon']} {avail[i][1]['name']} ({avail[i][2]})",
+            f"{avail[i][1]['icon']} {avail[i][1]['name']}",
             callback_data=f"svc:{avail[i][0]}", api_kwargs={"style": _svc_colors[i % 3]}
         ))
         if i+1 < len(avail):
             row.append(InlineKeyboardButton(
-                f"{avail[i+1][1]['icon']} {avail[i+1][1]['name']} ({avail[i+1][2]})",
+                f"{avail[i+1][1]['icon']} {avail[i+1][1]['name']}",
                 callback_data=f"svc:{avail[i+1][0]}", api_kwargs={"style": _svc_colors[(i+1) % 3]}
             ))
         buttons.append(row)
@@ -1543,12 +1543,12 @@ async def cb_back_services(update: Update, context: ContextTypes.DEFAULT_TYPE):
     for i in range(0, len(avail), 2):
         row = []
         row.append(InlineKeyboardButton(
-            f"{avail[i][1]['icon']} {avail[i][1]['name']} ({avail[i][2]})",
+            f"{avail[i][1]['icon']} {avail[i][1]['name']}",
             callback_data=f"svc:{avail[i][0]}", api_kwargs={"style": _svc_colors[i % 3]}
         ))
         if i+1 < len(avail):
             row.append(InlineKeyboardButton(
-                f"{avail[i+1][1]['icon']} {avail[i+1][1]['name']} ({avail[i+1][2]})",
+                f"{avail[i+1][1]['icon']} {avail[i+1][1]['name']}",
                 callback_data=f"svc:{avail[i+1][0]}", api_kwargs={"style": _svc_colors[(i+1) % 3]}
             ))
         buttons.append(row)
